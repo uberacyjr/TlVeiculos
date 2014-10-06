@@ -46,10 +46,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <?php echo HTML::link('http://tlveiculos.com/','Início') ?>
+                        <?php echo HTML::link('.','Início') ?>
                     </li>
                     <li>
-                        <?php echo HTML::link('http://tlveiculos.com/carros','Carros') ?>
+                        <?php echo HTML::link('carros/','Carros') ?>
                     </li>
                     <li>
                         <a href="#">Contatos</a>
