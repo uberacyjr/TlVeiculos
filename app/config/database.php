@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'tlveiculos',
-			'username'  => 'root',
-			'password'  => '123',
+			'database'  => 'forge',
+			'username'  => 'forge',
+			'password'  => '4ORSws7AHFfjtSFggV6D',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
