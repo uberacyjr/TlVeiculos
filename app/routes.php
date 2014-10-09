@@ -9,7 +9,7 @@ Route::get('/', function()
 {
 
 	$lastCarroRecord =  Item::all()->last();
-	print_r($lastCarroRecord);
+//	print_r($lastCarroRecord);
 
 	return View::make('index');
 });
