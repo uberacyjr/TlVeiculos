@@ -8,7 +8,7 @@
 Route::get('/', function()
 {
 
-	$teste = Model::all();
+	$teste = Car::all();
 	print_r($teste);
 
 });
