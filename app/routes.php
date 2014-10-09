@@ -8,7 +8,7 @@
 Route::get('/', function()
 {
 
-	$lastCarroRecord =  Item::all();
+	$lastCarroRecord =  Model::all();
 //	print_r($lastCarroRecord);
 
 	return View::make('index');
