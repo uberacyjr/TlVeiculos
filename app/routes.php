@@ -10,9 +10,9 @@ Route::get('/', function()
 
 	$results = DB::select('select * from Models ');
 	print_r($results);
+	$teste = Model::all();
+	
 
-	
-	
 });
 
 Route::get('/cadastrar_carro', function()

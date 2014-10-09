@@ -1,7 +1,7 @@
 <?php
 
 class Model extends Eloquent {
-	//protected $table = 'brands';
+	protected $table = 'Models';
 	//protected $fillable = array('name', 'id');
 	protected $guarded = array();
 
