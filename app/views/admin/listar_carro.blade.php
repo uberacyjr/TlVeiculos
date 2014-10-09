@@ -15,14 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($carro as $cars)
-        <tr>
-          <td>{{ $cars->placaCarro }}</td>
-          <td>{{ $cars->precoCarro }}</td>
-          <td>{{ $cars->quilometragemCarro }}</td>
-          <td>Ano</td>
-        </tr>
-        @endforeach
+  
      
 
       </tbody>
