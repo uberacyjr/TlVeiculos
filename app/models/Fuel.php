@@ -1,7 +1,7 @@
 <?php
 
 class Fuel extends Eloquent {
-	//protected $table = 'brands';
+	protected $table = 'fuels';
 	//protected $fillable = array('name', 'id');
 	protected $guarded = array();
 
