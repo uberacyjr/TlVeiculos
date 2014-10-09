@@ -1,7 +1,7 @@
 <?php
 
 class Exchange extends Eloquent {
-	protected $table = 'exchange';
+	protected $table = 'Exchange';
 	//protected $fillable = array('name', 'id');
 	protected $guarded = array();
 

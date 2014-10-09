@@ -1,7 +1,7 @@
 <?php
 
 class Image extends Eloquent {
-	protected $table = 'images';
+	protected $table = 'Images';
 	//protected $fillable = array('name', 'id');
 	protected $guarded = array();
 
