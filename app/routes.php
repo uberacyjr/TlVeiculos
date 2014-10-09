@@ -8,8 +8,8 @@
 Route::get('/', function()
 {
 
-	$lastCarroRecord =  Model::all();
-//	print_r($lastCarroRecord);
+	$results = DB::select('select * from Models ');
+	print_r($results);
 
 	return View::make('index');
 });
