@@ -11,7 +11,8 @@ Route::get('/', function()
 	$results = DB::select('select * from Models ');
 	print_r($results);
 
-	return View::make('index');
+	
+	
 });
 
 Route::get('/cadastrar_carro', function()
