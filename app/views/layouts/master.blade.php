@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>3 Col Portfolio - Start Bootstrap Template</title>
+    <title>BEM VINDO TLVEÍCULOS</title>
 
     <!-- Bootstrap Core CSS -->
         <?php echo HTML::style('css/bootstrap.min.css'); ?>
@@ -18,6 +18,7 @@
   <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/easySlider1.7.js"></script>
     <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">TLVEÍCULOS</a>
+                <a class="navbar-brand" href="#">LOGO TLVEÍCULOS</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,6 +55,9 @@
                     <li>
                         <a href="#">Contatos</a>
                     </li>
+                    <li>
+                        <?php echo HTML::link('http://tlveiculos.com/admin','Entrar') ?>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -61,21 +65,24 @@
         <!-- /.container -->
     </nav>
 
-   <div class="container">
-    <div style="height:30px;"></div>
+
         @yield('conteudo')
+        <div class="row text-center">
+        </div>
+
+    <div class="col-lg-12">
+        <hr>
     </div>
-        <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; SYNCONNECT 2014</p>
                 </div>
             </div>
             <!-- /.row -->
         </footer>
 
-    </div>
+
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.0 -->
