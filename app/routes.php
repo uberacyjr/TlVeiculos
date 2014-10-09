@@ -8,10 +8,8 @@
 Route::get('/', function()
 {
 
-	$results = DB::select('select * from Models ');
-	print_r($results);
 	$teste = Model::all();
-	
+	print_r($teste);
 
 });
 
