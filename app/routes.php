@@ -8,8 +8,7 @@
 Route::get('/', function()
 {
 
-	$teste = Car::all();
-	print_r($teste);
+return View::make('index');
 
 });
 
