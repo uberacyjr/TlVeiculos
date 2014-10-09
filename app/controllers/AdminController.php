@@ -20,7 +20,7 @@ class AdminController extends BaseController {
 	public function Show()
 	{
 
-	 		$carro =  Car::orderBy('idCars','DESC')->get();
+	 		$carro =  Car::all();
 		return View::make('admin.listar_carro', compact('carro'));
 	}
 		
