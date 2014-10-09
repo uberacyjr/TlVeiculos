@@ -21,7 +21,7 @@ class AdminController extends BaseController {
 	{
 
 	 	$carro =  Car::orderBy('idCars','DESC')->get();
-		return View::make('admin.listar_carro');
+		return View::make('admin.listar_carro', compact('carro'));
 	}
 		
 	public function Store()
