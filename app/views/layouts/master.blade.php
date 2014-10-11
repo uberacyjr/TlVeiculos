@@ -12,13 +12,12 @@
     <title>BEM VINDO TLVEÍCULOS</title>
 
     <!-- Bootstrap Core CSS -->
-        <?php echo HTML::style('css/bootstrap.min.css'); ?>
+    <?php echo HTML::style('css/bootstrap.min.css'); ?>
     <!-- Custom CSS -->
-      <?php echo HTML::style('css/3-col-portfolio.css'); ?>
-  <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/easySlider1.7.js"></script>
-    <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
-
+    <?php echo HTML::style('css/3-col-portfolio.css'); ?>
+    <?php echo HTML::style('css/screen.css'); ?>
+    <?php echo HTML::script('js/jquery.js'); ?>
+    <?php echo HTML::script('js/easySlider1.7.js'); ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,8 +55,13 @@
                         <a href="#">Contatos</a>
                     </li>
                     <li>
-                        <?php echo HTML::link('http://tlveiculos.com/admin','Entrar') ?>
+                    <?php echo HTML::link('carros/quemsomos','Empresa') ?>
                     </li>
+                    <li>
+                    <?php echo HTML::link('http://tlveiculos.com/admin','Entrar') ?>
+                       
+                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

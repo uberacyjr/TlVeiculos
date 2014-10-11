@@ -15,12 +15,10 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($carro as $cars)
+        @foreach($imagem as $imagens)
         <tr>
-          <td>{{ $cars->placaCarro }}</td>
-          <td>{{ $cars->precoCarro }}</td>
-          <td>{{ $cars->quilometragemCarro }}</td>
-          <td>Ano</td>
+          <td>{{ $imagens->idCars }}</td>
+ 
         </tr>
         @endforeach
      

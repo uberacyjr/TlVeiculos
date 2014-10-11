@@ -11,6 +11,12 @@ Route::get('/', function()
 return View::make('index');
 
 });
+Route::get('carros/quemsomos', function()
+{
+
+return View::make('carros.quemsomos');
+
+});
 
 Route::get('/cadastrar_carro', function()
 {
