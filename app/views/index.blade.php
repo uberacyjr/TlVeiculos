@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 @section('conteudo')
-    <div style="height:80px; ">
-        </div>
+    <div style="height:80px; "></div>
          <div class="col-md-8" style="margin: 0 auto; float: none;">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">

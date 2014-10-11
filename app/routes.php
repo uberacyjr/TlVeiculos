@@ -8,13 +8,27 @@
 Route::get('/', function()
 {
 
-return View::make('index');
+	return View::make('index');
 
 });
+Route::get('/admin', function()
+{
+
+	return View::make('admin.area_administrativa');
+
+});
+Route::get('/logar', function()
+{
+
+	return View::make('admin.logar_usuario');
+
+});
+
+
 Route::get('carros/quemsomos', function()
 {
 
-return View::make('carros.quemsomos');
+	return View::make('carros.quemsomos');
 
 });
 

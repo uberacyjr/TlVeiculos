@@ -67,6 +67,7 @@ class AdminController extends BaseController {
 
  		$lastCarroRecord =  Car::all()->last();
 
+ 		//Le todas as imagens e grava na pasta /carros do servidor
 		foreach (Input::file("imagem") as $imagem) 
 		{
 			$img = new Image();

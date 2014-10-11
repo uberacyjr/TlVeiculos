@@ -1,10 +1,9 @@
 @extends('layouts.master')
 
 @section('conteudo')
-<div style="height:30px;"></div>
-<div class="container">
 
 
+<div style="height:20px;"></div>
     <!-- Page Content -->
     <div class="container">
 
@@ -25,7 +24,7 @@
                     <img class="img-responsive" src="img/corola.jpg" alt="">
                 </a>
                 <h3>
-                <?php echo HTML::link('http://tlveiculos.com/carros_detalhes','Corola 1.6') ?>
+                <?php echo HTML::link('carros_detalhes','Corola 1.6') ?>
                 </h3>
                 <p>GOL G IV /2009/2010/ KIT TREND/ 4 PORTAS</p>
             </div>
@@ -43,7 +42,7 @@
                     <img class="img-responsive" src="img/clio.jpg" height="400" width="700" alt="">
                 </a>
                 <h3>
-                     <?php echo HTML::link('http://tlveiculos.com/carros_detalhes','Corola 1.6') ?>
+                     <?php echo HTML::link('carros_detalhes','Corola 1.6') ?>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>

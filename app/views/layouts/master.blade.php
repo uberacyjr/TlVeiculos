@@ -58,7 +58,7 @@
                     <?php echo HTML::link('carros/quemsomos','Empresa') ?>
                     </li>
                     <li>
-                    <?php echo HTML::link('http://tlveiculos.com/admin','Entrar') ?>
+                    <?php echo HTML::link('logar','Entrar') ?>
                        
                     </li>
 
@@ -71,8 +71,7 @@
 
 
         @yield('conteudo')
-        <div class="row text-center">
-        </div>
+
 
     <div class="col-lg-12">
         <hr>
@@ -88,12 +87,8 @@
 
 
     <!-- /.container -->
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <?php echo HTML::script('js//jquery-1.11.0.js'); ?>
+    <?php echo HTML::script('js/bootstrap.min.js'); ?>
 
 </body>
 
