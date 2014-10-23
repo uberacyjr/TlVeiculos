@@ -8,8 +8,8 @@ class AdminController extends BaseController {
 	{
 	
 		
-		$carros = DB::table('cars')->Join('models', 'cars.idModels', '=', 'models.idModels')->leftJoin('brands','models.idBrands','=', 'brands.idBrands')->get();
-		return View::make('admin.listar_carro', compact('carros'));
+		//$carros = DB::table('cars')->Join('models', 'cars.idModels', '=', 'models.idModels')->leftJoin('brands','models.idBrands','=', 'brands.idBrands')->get();
+		return View::make('admin.listar_carro');
 	}
 	public function Create()
 	{
