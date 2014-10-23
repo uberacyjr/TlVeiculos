@@ -7,7 +7,7 @@ class AdminController extends BaseController {
 	public function Index()
 	{
 	
-		//$carros = DB::table('images')->leftJoin('cars', 'images.idCars', '=', 'cars.idCars')->leftJoin('models','cars.idModels','=', 'models.idModels')->leftJoin('brands','models.idBrands','=', 'brands.idBrands')->get();
+		
 		$carros = DB::table('cars')->Join('models', 'cars.idModels', '=', 'models.idModels')->leftJoin('brands','models.idBrands','=', 'brands.idBrands')->get();
 		return View::make('admin.listar_carro', compact('carros'));
 	}
