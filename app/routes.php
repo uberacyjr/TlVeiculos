@@ -49,6 +49,7 @@ Route::get('/carros_detalhes', function()
 {
 	return View::make('carros.carros_detalhes');
 });
-
+Route::put('admin/update', 'AdminController@update');
 //Route::controller('admin', 'AdminController');
 Route::resource('admin', 'AdminController');
+Route::resource('image', 'ImageController');

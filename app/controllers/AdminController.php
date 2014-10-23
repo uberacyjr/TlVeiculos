@@ -6,7 +6,10 @@ class AdminController extends BaseController {
 
 	public function Index()
 	{
-		return View::make('admin.area_administrativa');
+	
+		//$carros = DB::table('images')->leftJoin('cars', 'images.idCars', '=', 'cars.idCars')->leftJoin('models','cars.idModels','=', 'models.idModels')->leftJoin('brands','models.idBrands','=', 'brands.idBrands')->get();
+		$carros = DB::table('cars')->Join('models', 'cars.idModels', '=', 'models.idModels')->leftJoin('brands','models.idBrands','=', 'brands.idBrands')->get();
+		return View::make('admin.listar_carro', compact('carros'));
 	}
 	public function Create()
 	{
@@ -14,21 +17,79 @@ class AdminController extends BaseController {
 		$fuels = Fuel::all();
 		$exchanges = Exchange::all();
 		$colors = Color::all();
+		
 		return View::make('admin.cadastrar_carro', compact('brands', 'fuels', 'exchanges', 'colors'));
 
 	}
-	public function Show()
+	public function gravaImg()
 	{
+		$filename 		 =  Time(). Input::file("file")->getClientOriginalName();
+		$upload_success = Input::file("file")->move('img/carros', $filename);
+		if( $upload_success ) {
+	        	return Response::json('success', 200);
+	        } else {
+	        	return Response::json('error', 400);
+	        }
 
-	 	//$carro =  Car::orderBy('idCars','DESC')->get();
-	 	//$imagem = Image::all()->take(60);
-	 
-		return View::make('admin.listar_carro', compact('imagem'));
 	}
-		
-	public function Store()
+	public function edit($id)
+	{
+			$brands = Brand::all();
+			$fuels = Fuel::all();
+			$exchanges = Exchange::all();
+			$colors = Color::all();
+		    $car = Car::findOrFail($id);
+			$model = Model::where('idModels', '=', $car->idModels)->first();
+			$image= Image::where('idCars', '=', $car->idCars);
+			$item =  Item::findOrFail($car->idItems);
+			return View::make('admin.editar_carro', compact('car','image', 'brands', 'fuels', 'exchanges', 'colors','model', 'items'));	
+	}
+	public function update($id)
 	{
 
+		$modelo = new Model();
+		$item = new Item();
+		$carro = new Car();
+
+	
+		$carro = Car::findOrFail($id);
+		$modelo =  Model::findOrFail($carro->idModels);
+		$item =  Item::findOrFail($carro->idItems);
+		
+		$modelo->descModelos =Input::get('descModelos');
+		$modelo->idBrands = Input::get('idBrands');
+		$modelo->save();
+		
+ 	
+ 	
+ 	
+		$item->airBag =Input::get('airBag');
+		$item->alarme = Input::get('alarme');
+		$item->arCondicionado = Input::get('arCondicionado');
+		$item->bancoMotoristaAjusteAltura = Input::get('bancoMotoristaAjusteAltura');
+		$item->save();
+		
+	    $lastModeloRecord =  Model::all()->last();
+ 	    $lastItemoRecord =  Item::all()->last();
+	
+		$carro->idFuels = Input::get('idFuels');
+		$carro->idExchange = Input::get('idExchange');
+		$carro->idItems = $lastItemoRecord->idItems;
+		$carro->idColors = Input::get('idColors');
+		$carro->idModels = $lastModeloRecord->idModels;
+		$carro->placaCarro = Input::get('placaCarro');
+		$carro->anoModelo = Input::get('anoModelo');
+		$carro->precoCarro = Input::get('precoCarro');
+		$carro->quilometragemCarro = Input::get('quilometragemCarro');
+		//print_r($carro);
+		$carro->save();
+		
+		return Redirect::action('AdminController@index');
+
+	}
+
+	public function Store()	
+	{
 		//---Cria Modelo---//
 		$modelo = new Model();
 		$modelo->descModelos =Input::get('descModelos');
@@ -65,23 +126,15 @@ class AdminController extends BaseController {
 		$carro->save();
 		//--Fim Cria Carro--//
 
- 		$lastCarroRecord =  Car::all()->last();
-
- 		//Le todas as imagens e grava na pasta /carros do servidor
-		foreach (Input::file("imagem") as $imagem) 
-		{
-			$img = new Image();
-			$img->idCars = $lastCarroRecord->idCars;
-
-			$filename 		 =  Time(). $imagem->getClientOriginalName();
-			$img->pathImagem = 'img/carros/'. $filename;
-			$imagem->move('img/carros', $filename);
-			$img->save();
-		}
-		return Redirect::action('AdminController@show');
+		return Redirect::action('AdminController@index');
 	}
+	public function destroy($id)
+	{
+			$car = Car::findOrFail($id);
+			$image = Image::where('idCars','=', $car->idCars)->delete();
+			$car->delete();
 
-
-
+		return Redirect::action('AdminController@index');
+	}
 
 }

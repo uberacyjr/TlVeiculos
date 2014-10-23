@@ -2,6 +2,8 @@
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
+   <?php echo HTML::script('js/dropzone.js'); ?>
+    <?php echo HTML::style('css/basic.css'); ?>
 
         <!-- CSS code from Bootply.com editor -->
         
@@ -92,9 +94,9 @@ footer {
           <h5>Opções <i class="glyphicon glyphicon-chevron-down"></i></h5>
           </a>
             <ul class="list-unstyled collapse in" id="userMenu">
-              <li> <?php echo HTML::link('http://tlveiculos.com','Home') ?></li>
-                <li> <?php echo HTML::link('http://tlveiculos.com/admin/create','Anunciar Carros') ?></li>
-             <li> <?php echo HTML::link('http://tlveiculos.com/admin/show','Carros') ?></li>
+              <li> <?php echo HTML::link('/','Home') ?></li>
+                <li> <?php echo HTML::link('admin/create','Anunciar Carros') ?></li>
+             <li> <?php echo HTML::link('/admin','Carros') ?></li>
 
             </ul>
         </li>
