@@ -76,7 +76,7 @@
           <td> 
            {{ HTML::linkAction('AdminController@edit','Editar Carro',array($carro->idCars), array('class' => 'btn btn-info')) }} {{ HTML::linkAction('ImageController@show','Incluir Imagens',array($carro->idCars), array('class' => 'btn btn-info')) }}  
             {{ Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('admin.destroy', $carro->idCars))) }}
-                              {{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
+                              {{ Form::submit('DELETAR', array('class' => 'btn btn-danger')) }}
                           {{ Form::close() }}</h2>
           </td>
         </tr>

@@ -56,7 +56,7 @@
                         <?php echo HTML::link('.','Início') ?>
                     </li>
                     <li>
-                        <?php echo HTML::link('carros/','Carros') ?>
+                        <?php echo HTML::link('conteudo/','Carros') ?>
                     </li>
                     <li>
                         <a href="#">Contatos</a>

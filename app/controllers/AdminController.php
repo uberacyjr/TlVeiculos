@@ -6,8 +6,6 @@ class AdminController extends BaseController {
 
 	public function Index()
 	{
-	
-		
 		$carros = DB::table('Cars')->leftJoin('Models', 'Cars.idModels', '=', 'Models.idModels')->leftJoin('Brands','Models.idBrands','=', 'Brands.idBrands')->get();
 		return View::make('admin.listar_carro',compact('carros') );
 	}
@@ -21,17 +19,7 @@ class AdminController extends BaseController {
 		return View::make('admin.cadastrar_carro', compact('brands', 'fuels', 'exchanges', 'colors'));
 
 	}
-	public function gravaImg()
-	{
-		$filename 		 =  Time(). Input::file("file")->getClientOriginalName();
-		$upload_success = Input::file("file")->move('img/carros', $filename);
-		if( $upload_success ) {
-	        	return Response::json('success', 200);
-	        } else {
-	        	return Response::json('error', 400);
-	        }
 
-	}
 	public function edit($id)
 	{
 			$brands = Brand::all();
@@ -50,7 +38,6 @@ class AdminController extends BaseController {
 		$modelo = new Model();
 		$item = new Item();
 		$carro = new Car();
-
 	
 		$carro = Car::findOrFail($id);
 		$modelo =  Model::findOrFail($carro->idModels);
@@ -59,10 +46,7 @@ class AdminController extends BaseController {
 		$modelo->descModelos =Input::get('descModelos');
 		$modelo->idBrands = Input::get('idBrands');
 		$modelo->save();
-		
- 	
- 	
- 	
+
 		$item->airBag =Input::get('airBag');
 		$item->alarme = Input::get('alarme');
 		$item->arCondicionado = Input::get('arCondicionado');
@@ -131,9 +115,13 @@ class AdminController extends BaseController {
 	public function destroy($id)
 	{
 			$car = Car::findOrFail($id);
+			$imageAux = Image::where('idCars','=', $car->idCars)->get();
 			$image = Image::where('idCars','=', $car->idCars)->delete();
+			foreach ($imageAux as $images ) 
+			{
+				 File::delete($images->pathImagem);
+			}
 			$car->delete();
-
 		return Redirect::action('AdminController@index');
 	}
 

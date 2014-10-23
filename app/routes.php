@@ -52,4 +52,5 @@ Route::get('/carros_detalhes', function()
 Route::put('admin/update', 'AdminController@update');
 //Route::controller('admin', 'AdminController');
 Route::resource('admin', 'AdminController');
+Route::resource('conteudo', 'ConteudoController');
 Route::resource('image', 'ImageController');
