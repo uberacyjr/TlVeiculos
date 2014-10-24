@@ -34,7 +34,7 @@
         <div class="row">
           
             <div class="col-md-8">
-                {{ HTML::image("$imagem->pathImagem",'foto', array('class'=>'img-responsive')) }}
+               <a class="fancybox" href=<?php echo "../".$imagem->pathImagem; ?>  data-fancybox-group="gallery" >  {{ HTML::image("$imagem->pathImagem",'foto', array('class'=>'img-responsive')) }}</a>
         
             </div>
 
