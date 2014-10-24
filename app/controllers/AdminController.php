@@ -30,7 +30,7 @@ class AdminController extends BaseController {
 			$model = Model::where('idModels', '=', $car->idModels)->first();
 			$image= Image::where('idCars', '=', $car->idCars);
 			$item =  Item::findOrFail($car->idItems);
-			return View::make('admin.editar_carro', compact('car','image', 'brands', 'fuels', 'exchanges', 'colors','model', 'items'));	
+			return View::make('admin.editar_carro', compact('car','image', 'brands', 'fuels', 'exchanges', 'colors','model', 'item'));	
 	}
 	public function update($id)
 	{
@@ -51,6 +51,32 @@ class AdminController extends BaseController {
 		$item->alarme = Input::get('alarme');
 		$item->arCondicionado = Input::get('arCondicionado');
 		$item->bancoMotoristaAjusteAltura = Input::get('bancoMotoristaAjusteAltura');
+		$item->cdPlayer =Input::get('cdPlayer');
+		$item->computadorBordo = Input::get('computadorBordo');
+		$item->controleAutomaticoVelocidade = Input::get('controleAutomaticoVelocidade');
+		$item->controleTracao = Input::get('controleTracao');
+		$item->desembacadorTraseiro =Input::get('desembacadorTraseiro');
+		$item->direcaoHidraulica = Input::get('direcaoHidraulica');
+		$item->dvdPlayer = Input::get('dvdPlayer');
+		$item->encostoCabecaTraseiro = Input::get('encostoCabecaTraseiro');
+		$item->farolXenonio =Input::get('farolXenonio');
+		$item->freioAbs = Input::get('freioAbs');
+		$item->gps = Input::get('gps');
+		$item->limpadorTraseiro = Input::get('limpadorTraseiro');
+		$item->retrovisorEletrico =Input::get('retrovisorEletrico');
+		$item->rodaLigaLeve = Input::get('rodaLigaLeve');
+		$item->gps = Input::get('gps');
+		$item->sensorChuva = Input::get('sensorChuva');
+		$item->sensorEstacionamento =Input::get('sensorEstacionamento');
+		$item->tetoSolar = Input::get('tetoSolar');
+		$item->tracao4x4 = Input::get('tracao4x4');
+		$item->travasEletricas = Input::get('travasEletricas');
+		$item->vidrosEletricos =Input::get('vidrosEletricos');
+		$item->voltanteRegulagemAltura = Input::get('voltanteRegulagemAltura');
+		$item->bancoCouro = Input::get('bancoCouro');
+		$item->capotaMaritima = Input::get('capotaMaritima');
+		$item->protetorCacamba = Input::get('protetorCacamba');
+		$item->radio = Input::get('radio');
 		$item->save();
 		
 	    $lastModeloRecord =  Model::all()->last();
@@ -65,6 +91,7 @@ class AdminController extends BaseController {
 		$carro->anoModelo = Input::get('anoModelo');
 		$carro->precoCarro = Input::get('precoCarro');
 		$carro->quilometragemCarro = Input::get('quilometragemCarro');
+		$carro->vendido = Input::get('vendido');
 		//print_r($carro);
 		$carro->save();
 		
@@ -87,6 +114,32 @@ class AdminController extends BaseController {
 		$item->alarme = Input::get('alarme');
 		$item->arCondicionado = Input::get('arCondicionado');
 		$item->bancoMotoristaAjusteAltura = Input::get('bancoMotoristaAjusteAltura');
+		$item->cdPlayer =Input::get('cdPlayer');
+		$item->computadorBordo = Input::get('computadorBordo');
+		$item->controleAutomaticoVelocidade = Input::get('controleAutomaticoVelocidade');
+		$item->controleTracao = Input::get('controleTracao');
+		$item->desembacadorTraseiro =Input::get('desembacadorTraseiro');
+		$item->direcaoHidraulica = Input::get('direcaoHidraulica');
+		$item->dvdPlayer = Input::get('dvdPlayer');
+		$item->encostoCabecaTraseiro = Input::get('encostoCabecaTraseiro');
+		$item->farolXenonio =Input::get('farolXenonio');
+		$item->freioAbs = Input::get('freioAbs');
+		$item->gps = Input::get('gps');
+		$item->limpadorTraseiro = Input::get('limpadorTraseiro');
+		$item->retrovisorEletrico =Input::get('retrovisorEletrico');
+		$item->rodaLigaLeve = Input::get('rodaLigaLeve');
+		$item->gps = Input::get('gps');
+		$item->sensorChuva = Input::get('sensorChuva');
+		$item->sensorEstacionamento =Input::get('sensorEstacionamento');
+		$item->tetoSolar = Input::get('tetoSolar');
+		$item->tracao4x4 = Input::get('tracao4x4');
+		$item->travasEletricas = Input::get('travasEletricas');
+		$item->vidrosEletricos =Input::get('vidrosEletricos');
+		$item->voltanteRegulagemAltura = Input::get('voltanteRegulagemAltura');
+		$item->bancoCouro = Input::get('bancoCouro');
+		$item->capotaMaritima = Input::get('capotaMaritima');
+		$item->protetorCacamba = Input::get('protetorCacamba');
+		$item->radio = Input::get('radio');
 		$item->save();
  		//-----fim cria item--------//
 
