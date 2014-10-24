@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <?php echo HTML::link('/','TL Veículos', array('class'=>'navbar-brand')) ?>
+             <a href="/">{{ HTML::image('img/logotlveiculos.png', 'logo', array('height' => '35px', 'style'=>'margin-top:9px')) }}</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -65,7 +65,7 @@
                     <?php echo HTML::link('carros/quemsomos','Empresa') ?>
                     </li>
                     <li>
-                    <?php echo HTML::link('logar','Entrar') ?>
+                    <?php echo HTML::link('login','Entrar') ?>
                        
                     </li>
 
@@ -102,7 +102,7 @@
 
     <!-- /.container -->
     <?php echo HTML::script('js//jquery-1.11.0.js'); ?>
-    <?php echo HTML::script('js/bootstrap.min.js'); ?>
+    <?php echo HTML::script('js/bootstrap.min.js'); ?> 
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;

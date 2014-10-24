@@ -30,10 +30,10 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="/admin">
+      <form class="form-signin" role="form" method="post" action="/login">
         <h2 class="form-signin-heading">Coloque Seus Dados</h2>
-        <input type="email" class="form-control" placeholder="Email address"  autofocus>
-        <input type="password" class="form-control" placeholder="Password" >
+        <input type="text" class="form-control" placeholder="Email address"  autofocus name="username">
+        <input type="password" class="form-control" placeholder="Password" name="password" >
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Lembrar
         </label>

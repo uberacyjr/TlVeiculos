@@ -75,7 +75,7 @@ footer {
              <li> <?php echo HTML::link('/admin','Carros') ?></li>
           </ul>
         </li>
-        <li><a href="../"><i class="glyphicon glyphicon-lock"></i> Sair</a></li>
+        <li><?php echo HTML::link('/logout','Sair') ?></li>
       </ul>
     </div>
   </div><!-- /container -->
