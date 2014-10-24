@@ -57,7 +57,7 @@
                         <?php echo HTML::link('conteudo/','Carros') ?>
                     </li>
                     <li>
-                        <a href="#">Contatos</a>
+                        <?php echo HTML::link('contatos/','Contatos') ?>
                     </li>
                     <li>
                     <?php echo HTML::link('carros/quemsomos','Empresa') ?>
@@ -83,9 +83,7 @@
         @yield('conteudo')
 
 
-    <div class="col-lg-12">
-      
-    </div>
+    
         <footer style="background-color:#efefef;">
             <div class="row">
                 <div class="col-lg-12">

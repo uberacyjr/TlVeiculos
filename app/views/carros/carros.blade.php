@@ -31,7 +31,10 @@
                             {{ HTML::linkAction('ConteudoController@show',"$carro->descModelos",array($carro->idImages), array('class' => 'btn btn-info')) }}
                                 
                             </h3>
-                            <p>GOL G IV /2009/2010/ KIT TREND/ 4 PORTAS</p>
+
+
+
+
                         </div>
                     @endif
              @endforeach

@@ -11,6 +11,12 @@ Route::get('/', function()
 	return View::make('index');
 
 });
+Route::get('/contatos', function()
+{
+
+	return View::make('carros.contatos');
+
+});
 Route::get('/admin', function()
 {
 
