@@ -156,7 +156,7 @@
        <label class="itens" >Radio</label>
       <input type="checkbox" name="radio"/>
        <label class="itens" >Retrovisor Eletrico</label>
-      <input type="checkbox" name="retrovisor Eletrico"/>
+      <input type="checkbox" name="retrovisorEletrico"/>
        <label class="itens" >Roda Liga Leve</label>
       <input type="checkbox" name="rodaLigaLeve"/>
       <label class="itens" >Sensor de Chuva</label>
@@ -177,6 +177,8 @@
       <input type="checkbox" name="vidrosEletricos"/>
        <label class="itens" >Volante C/ Regulagem Altura</label>
       <input type="checkbox" name="voltanteRegulagemAltura"/>
+      <label class="itens" >Protetor Caçamba</label>
+      <input type="checkbox" name="protetorCacamba"/>
   </div>
   <hr>
 

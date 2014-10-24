@@ -99,84 +99,98 @@
       <input type="text" class="form-control" name="precoCarro" id="precoCarro" value="{{ $car->precoCarro}}" placeholder="Preço">
     </div>
   </div>
+   <div class="form-group">
+    <label for="vendido" class="col-sm-2 control-label">Vendido</label>
+    <div class="col-sm-3">
+      <select class="form-control" name="vendido">
+        <option value="2" <?php if ($car->vendido == 2){ echo "selected"; } ?>>
+          sim
+        </option>
+          <option value="1"  <?php if ($car->vendido == 1){ echo "selected"; } ?>>
+          não
+        </option>
+      </select>
+    </div>
+  </div>
   <hr>
+  
    <div class="form-group">
       <h4>Opcionais</h4>
     <label class="itens" >Air Bag</label>
-    <input type="checkbox" name="airBag"/>
+    <input type="checkbox" name="airBag" <?php if ($item->airBag == 1){ echo "checked"; } ?> />
 
     <label class="itens" >Alarme</label>
-    <input type="checkbox" name="alarme"/>
+    <input type="checkbox" name="alarme" <?php if ($item->alarme == 1){ echo "checked"; } ?>/>
 
     <label class="itens" >Banco de Couro</label>
-    <input type="checkbox" name="bancoCouro"/>
+    <input type="checkbox" name="bancoCouro" <?php if ($item->bancoCouro == 1){ echo "checked"; } ?>/>
 
     <label class="itens" >Capota Maritima</label>
-    <input type="checkbox" name="capotaMaritima"/>
+    <input type="checkbox" name="capotaMaritima" <?php if ($item->capotaMaritima == 1){ echo "checked"; } ?>/>
 
 
     <label class="itens" >Ar Condicionado</label>
-    <input type="checkbox" name="arCondicionado"/>
+    <input type="checkbox" name="arCondicionado" <?php if ($item->arCondicionado == 1){ echo "checked"; } ?>/>
 
     <label class="itens" >Banco Motorista Ajuste Altura</label>
-    <input type="checkbox" name="bancoMotoristaAjusteAltura"/>
+    <input type="checkbox" name="bancoMotoristaAjusteAltura" <?php if ($item->bancoMotoristaAjusteAltura == 1){ echo "checked"; } ?>/>
 
     <label class="itens" >CD Player</label>
-    <input type="checkbox" name="cdPlayer"/>
+    <input type="checkbox" name="cdPlayer" <?php if ($item->cdPlayer == 1){ echo "checked"; } ?>/>
 
     <label class="itens" >Computador de Bordo</label>
-    <input type="checkbox" name="computadorBordo"/>
+    <input type="checkbox" name="computadorBordo" <?php if ($item->computadorBordo == 1){ echo "checked"; } ?>/>
 </br>
 </br>
       
        <label class="itens" >Controle Automatico Velocidade</label>
-      <input type="checkbox" name="controleAutomaticoVelocidade"/>
+      <input type="checkbox" name="controleAutomaticoVelocidade"  <?php if ($item->controleAutomaticoVelocidade == 1){ echo "checked"; } ?>/>
        <label class="itens" >COntrole de Tração</label>
-      <input type="checkbox" name="controleTracao"/>
+      <input type="checkbox" name="controleTracao" <?php if ($item->controleTracao == 1){ echo "checked"; } ?>/>
        <label class="itens" >Desembaçãdor Traseiro</label>
-      <input type="checkbox" name="desembacadorTraseiro"/>
+      <input type="checkbox" name="desembacadorTraseiro" <?php if ($item->desembacadorTraseiro == 1){ echo "checked"; } ?>/>
        <label class="itens" >Direção Higrtaulica</label>
-      <input type="checkbox" name="direcaoHidraulica"/>
+      <input type="checkbox" name="direcaoHidraulica" <?php if ($item->direcaoHidraulica == 1){ echo "checked"; } ?>/>
        <label class="itens" >DVD Player</label>
-      <input type="checkbox" name="dvdPlayer"/>
+      <input type="checkbox" name="dvdPlayer" <?php if ($item->dvdPlayer == 1){ echo "checked"; } ?>/>
      <label class="itens" >Encosto Cabeca Traseiro</label>
-      <input type="checkbox" name="encostoCabecaTraseiro"/>
+      <input type="checkbox" name="encostoCabecaTraseiro" <?php if ($item->encostoCabecaTraseiro == 1){ echo "checked"; } ?>/>
    
 </br>
 </br>
       
      <label class="itens" >Farol Xenonio</label>
-      <input type="checkbox" name="farolXenonio"/>
+      <input type="checkbox" name="farolXenonio"  <?php if ($item->farolXenonio == 1){ echo "checked"; } ?>/>
        <label class="itens" >Freio ABS</label>
-      <input type="checkbox" name="freioAbs"/>
+      <input type="checkbox" name="freioAbs"  <?php if ($item->freioAbs == 1){ echo "checked"; } ?>/>
        <label class="itens" >GPS</label>
-      <input type="checkbox" name="gps"/>
+      <input type="checkbox" name="gps"  <?php if ($item->gps == 1){ echo "checked"; } ?>/>
        <label class="itens" >Limpador Traseiro</label>
-      <input type="checkbox" name="limpadorTraseiro"/>
+      <input type="checkbox" name="limpadorTraseiro"  <?php if ($item->limpadorTraseiro == 1){ echo "checked"; } ?>/>
        <label class="itens" >Radio</label>
-      <input type="checkbox" name="radio"/>
+      <input type="checkbox" name="radio"  <?php if ($item->radio == 1){ echo "checked"; } ?>/>
        <label class="itens" >Retrovisor Eletrico</label>
-      <input type="checkbox" name="retrovisor Eletrico"/>
+      <input type="checkbox" name="retrovisorEletrico"  <?php if ($item->retrovisorEletrico == 1){ echo "checked"; } ?>/>
        <label class="itens" >Roda Liga Leve</label>
-      <input type="checkbox" name="rodaLigaLeve"/>
+      <input type="checkbox" name="rodaLigaLeve"  <?php if ($item->rodaLigaLeve == 1){ echo "checked"; } ?>/>
       <label class="itens" >Sensor de Chuva</label>
-      <input type="checkbox" name="sensorChuva"/>
+      <input type="checkbox" name="sensorChuva"  <?php if ($item->sensorChuva == 1){ echo "checked"; } ?>/>
       
       </br>
     </br>
       
       <label class="itens" >Sensor Estacionamento</label>
-      <input type="checkbox" name="sensorEstacionamento"/>
+      <input type="checkbox" name="sensorEstacionamento"  <?php if ($item->sensorEstacionamento == 1){ echo "checked"; } ?>/>
        <label class="itens" >Teto Solar</label>
-      <input type="checkbox" name="tetoSolar"/>
+      <input type="checkbox" name="tetoSolar" <?php if ($item->tetoSolar == 1){ echo "checked"; } ?>/>
        <label class="itens" >Tração 4X4</label>
-      <input type="checkbox" name="tracao4x4"/>
+      <input type="checkbox" name="tracao4x4" <?php if ($item->tracao4x4 == 1){ echo "checked"; } ?>/>
        <label class="itens" >Travas Eletricas</label>
-      <input type="checkbox" name="travasEletricas"/>
+      <input type="checkbox" name="travasEletricas" <?php if ($item->travasEletricas == 1){ echo "checked"; } ?>/>
        <label class="itens" >Vidros Eletricos</label>
-      <input type="checkbox" name="vidrosEletricos"/>
+      <input type="checkbox" name="vidrosEletricos" <?php if ($item->vidrosEletricos == 1){ echo "checked"; } ?>/>
        <label class="itens" >Volante C/ Regulagem Altura</label>
-      <input type="checkbox" name="voltanteRegulagemAltura"/>
+      <input type="checkbox" name="voltanteRegulagemAltura" <?php if ($item->voltanteRegulagemAltura == 1){ echo "checked"; } ?>/>
   </div>
   <hr>
 

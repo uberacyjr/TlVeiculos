@@ -9,5 +9,14 @@ class ConteudoController extends BaseController {
 	
 		return View::make('carros.carros', compact('carros') );
 	}
+	public function show($id)
+	{
+		$imagem =  Image::findOrFail($id);
+		$car = Car::findOrFail($imagem->idCars);
+		$model = Model::findOrFail($car->idModels);
+		$brand = Brand::findOrFail($model->idBrands);
+		$images= Image::where('idCars', '=', $car->idCars)->get();
+		return View::make('carros.carros_detalhes', compact('imagem','car','model','brand','images'));
+	}
 
 }

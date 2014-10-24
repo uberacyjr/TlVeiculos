@@ -13,18 +13,16 @@
 
     <!-- Bootstrap Core CSS -->
     <?php echo HTML::style('css/bootstrap.min.css'); ?>
+     <?php echo HTML::script('js/jquery-1.10.1.min.js'); ?>
+
+    <?php echo HTML::script('js/jquery.fancybox.js'); ?>
+    <?php echo HTML::style('css/jquery.fancybox.css'); ?>
     <!-- Custom CSS -->
     <?php echo HTML::style('css/3-col-portfolio.css'); ?>
     <?php echo HTML::style('css/screen.css'); ?>
-    <?php echo HTML::script('js/jquery.js'); ?>
-    <?php echo HTML::script('js/easySlider1.7.js'); ?>
-    <?php echo HTML::script('js/jquery.steps.js'); ?>
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/jquery.steps.css">
-    <script src="js/lib/modernizr-2.6.2.min.js"></script>
-    <script src="js/lib/jquery-1.9.1.min.js"></script>
-    <script src="js/jquery.cookie-1.3.1.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -101,7 +99,6 @@
 
 
     <!-- /.container -->
-    <?php echo HTML::script('js//jquery-1.11.0.js'); ?>
     <?php echo HTML::script('js/bootstrap.min.js'); ?> 
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];

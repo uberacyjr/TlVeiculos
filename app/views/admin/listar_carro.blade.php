@@ -3,7 +3,7 @@
 @section('conteudoAdmin')
 
 <?php 
-  $vendido = "danger";
+  $vendido = "";
 ?>
 <div class="table-responsive">
  @if(!empty($carros))
@@ -24,9 +24,16 @@
 
      
         @foreach($carros as $carro)
-         <?php if  ($carro->vendido == null or $carro->vendido == ''  )
+         <?php 
+         if  ($carro->vendido == null or $carro->vendido == '1'  )
          {
            $vendido = "success";
+            
+          }
+          else
+          {
+
+            $vendido = "danger";
             
           }
         ?>

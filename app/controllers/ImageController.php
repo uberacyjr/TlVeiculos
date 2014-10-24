@@ -14,6 +14,7 @@ class ImageController extends BaseController {
 		return View::make('imagem.cadastraimagem', compact('nome', 'car'));
 
 	}
+
 	public function store()
 	{
 		$carroId = Input::get("idCarro");
