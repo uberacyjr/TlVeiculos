@@ -25,7 +25,7 @@
     <script src="js/lib/modernizr-2.6.2.min.js"></script>
     <script src="js/lib/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.cookie-1.3.1.js"></script>
-    
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -93,7 +93,7 @@
                 <div class="col-lg-12">
                 </br>
                     <address><strong>Endereço: </strong> Rua 8 Condomínio 197 loja 01 - Vicente Píres - DF <strong>Telefones: </strong> (61) 3597 1700 - (61) 3597 2060</address>
-
+                       <address> <div class="fb-like" data-href="https://www.facebook.com/tlveiculos?fref=ts" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></address>
                 </div>
             </div>
             <!-- /.row -->
