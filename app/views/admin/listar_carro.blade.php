@@ -2,26 +2,15 @@
 
 @section('conteudoAdmin')
 
-<style type="css">
-  .vendido
-  {
-    background-color: red;
-  }
-   .disponivel
-  {
-    background-color: green;
-  }
-</style>
 <?php 
-  $vendido = "../img/indisponivel.png";
+  $vendido = "danger";
 ?>
-<div class="bs-example">
+<div class="table-responsive">
  @if(!empty($carros))
   
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Disponibilidade</th>
           <th>Placa</th>
           <th>Marca</th>
           <th>Modelo</th>
@@ -37,12 +26,12 @@
         @foreach($carros as $carro)
          <?php if  ($carro->vendido == null or $carro->vendido == ''  )
          {
-           $vendido = "../img/disponivel.png";
+           $vendido = "success";
             
           }
         ?>
-        <tr>
-          <td><img src="{{ $vendido }}" /></td>
+        <tr class="{{$vendido}}">
+          
            <td>
               @if  ($carro->placaCarro != null or $carro->placaCarro != ''  )
                   {{$carro->placaCarro }}
@@ -86,7 +75,7 @@
       </tbody>
     </table>
     @else
-    <div  class="col-md-9"><p>Não possui carro cadastrado</p></div>
+   <p class="text-center" style="font-size:21px;"><strong>Não possui carro cadastrado <span class="glyphicon glyphicon-warning-sign"></span></strong></p>
     @endif
   </div>
   @stop

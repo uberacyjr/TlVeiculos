@@ -16,23 +16,26 @@
             </div>
         </div>
         <!-- /.row -->
+        @if(!empty($carros))
+            <!-- Projects Row -->
+            <div class="row">
 
-        <!-- Projects Row -->
-        <div class="row">
+                @foreach($carros as $carro)
 
-            @foreach($carros as $carro)
-
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="{{ $carro->pathImagem }}" alt="">
-                </a>
-                <h3>
-                <?php echo HTML::link('carros_detalhes'," $carro->descModelos ") ?>
-                </h3>
-                <p>GOL G IV /2009/2010/ KIT TREND/ 4 PORTAS</p>
+                <div class="col-md-4 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="{{ $carro->pathImagem }}" alt="">
+                    </a>
+                    <h3>
+                    <p class="text-uppercase"><?php echo HTML::link('carros_detalhes'," $carro->descModelos ") ?></p>
+                    </h3>
+                    <p>GOL G IV /2009/2010/ KIT TREND/ 4 PORTAS</p>
+                </div>
+             @endforeach
             </div>
-         @endforeach
-        </div>
-        <!-- /.row -->
-
+            <!-- /.row -->
+         @else
+            <div  class="col-lg-12"><p>Não possui Imagem cadastradas</p></div>
+        @endif
+    </div>
 @stop

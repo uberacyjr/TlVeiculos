@@ -25,6 +25,7 @@
     <script src="js/lib/modernizr-2.6.2.min.js"></script>
     <script src="js/lib/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.cookie-1.3.1.js"></script>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,12 +43,11 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">LOGO TLVEÍCULOS</a>
+                 <?php echo HTML::link('/','TL Veículos', array('class'=>'navbar-brand')) ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -70,9 +70,14 @@
                     </li>
 
                 </ul>
+               
+                    <p class="text-right" style="color:white;"><span class="glyphicon glyphicon-earphone"></span>  <strong>(61) 3597-1700 / (61) 3597-2060 </strong></p>
+              
             </div>
+
             <!-- /.navbar-collapse -->
         </div>
+
         <!-- /.container -->
     </nav>
 
@@ -81,12 +86,14 @@
 
 
     <div class="col-lg-12">
-        <hr>
+      
     </div>
-        <footer>
+        <footer style="background-color:#efefef;">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; SYNCONNECT 2014</p>
+                </br>
+                    <address><strong>Endereço: </strong> Rua 8 Condomínio 197 loja 01 - Vicente Píres - DF <strong>Telefones: </strong> (61) 3597 1700 - (61) 3597 2060</address>
+
                 </div>
             </div>
             <!-- /.row -->
@@ -96,7 +103,13 @@
     <!-- /.container -->
     <?php echo HTML::script('js//jquery-1.11.0.js'); ?>
     <?php echo HTML::script('js/bootstrap.min.js'); ?>
-
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 </html>

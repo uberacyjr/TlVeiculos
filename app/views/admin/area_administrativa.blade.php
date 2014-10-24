@@ -1,7 +1,7 @@
 
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    <?php echo HTML::script('js/dropzone.js'); ?>
     <?php echo HTML::style('css/basic.css'); ?>
 
@@ -63,7 +63,7 @@ footer {
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">TLVEÍCULOS</a>
+      <?php echo HTML::link('/','Início', array('class'=>'navbar-brand')) ?>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -71,7 +71,8 @@ footer {
         <li class="dropdown">
           <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
           <ul id="g-account-menu" class="dropdown-menu" role="menu">
-            <li><a href="#">Meu Perfil</a></li>
+            <li><?php echo HTML::link('admin/create','Incluir Carros') ?></li>
+             <li> <?php echo HTML::link('/admin','Carros') ?></li>
           </ul>
         </li>
         <li><a href="../"><i class="glyphicon glyphicon-lock"></i> Sair</a></li>
@@ -79,99 +80,38 @@ footer {
     </div>
   </div><!-- /container -->
 </div>
-<!-- /Header -->
-<!-- Main -->
-<div class="container-fluid">
-<div class="row">
-  <div class="col-sm-3">
-      <!-- Left column -->
-      <strong><i class="glyphicon glyphicon-wrench"></i> Menu</strong> 
-      
-      <hr>
-      
-      <ul class="list-unstyled">
-        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">
-          <h5>Opções <i class="glyphicon glyphicon-chevron-down"></i></h5>
-          </a>
-            <ul class="list-unstyled collapse in" id="userMenu">
-              <li> <?php echo HTML::link('/','Home') ?></li>
-                <li> <?php echo HTML::link('admin/create','Anunciar Carros') ?></li>
-             <li> <?php echo HTML::link('/admin','Carros') ?></li>
 
-            </ul>
-        </li>
-       
-           
-      <hr>
-      
-
-  
-   
-   
-
-      
-      
-    </div><!-- /col-3 -->
-    <div class="col-sm-9">
-        
-  
-
-            @yield('conteudoAdmin')
-              
-              
-              
-              
-
-
-      
-      
-</div>
-</div>
+    <div class="row">
+      <div class="col-sm-12">
+      @yield('conteudoAdmin')
+    </div>
+  </div>
 <!-- /Main -->
 
 <footer class="text-center">SYNCONNECT 2014</footer>
+ <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- JavaScript jQuery code from Bootply.com editor  -->
 
+<script type='text/javascript'>
 
-
-
-
-  
-        
-        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-
-        <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-
-
-
-
-
-        
-        <!-- JavaScript jQuery code from Bootply.com editor  -->
-        
-        <script type='text/javascript'>
-        
-        $(document).ready(function() {
-        
-            $(".alert").addClass("in").fadeOut(4500);
-
-/* swap open/close side menu icons */
-$('[data-toggle=collapse]').click(function(){
-    // toggle icon
-    $(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
+$(document).ready(function() {
+  $(".alert").addClass("in").fadeOut(4500);
+  /* swap open/close side menu icons */
+  $('[data-toggle=collapse]').click(function(){
+  // toggle icon
+  $(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
+  });       
 });
-        
-        });
-        
-        </script>
-        
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-40413119-1', 'bootply.com');
-          ga('send', 'pageview');
-        </script>
+
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-40413119-1', 'bootply.com');
+ga('send', 'pageview');
+</script>
         
