@@ -1,12 +1,24 @@
 
+<!DOCTYPE html>
+<html lang="en">
 
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <?php echo HTML::script('js/dropzone.js'); ?>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BEM VINDO TLVEÍCULOS</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <?php echo HTML::script('js/jquery-1.10.1.min.js'); ?>
+
+    <?php echo HTML::script('js/dropzone.js'); ?>
     <?php echo HTML::style('css/basic.css'); ?>
-
+    <?php echo HTML::script('js/mask.js'); ?>
         <!-- CSS code from Bootply.com editor -->
-        
+</head>
         <style type="text/css">
             .navbar-static-top {
   margin-bottom:20px;
@@ -52,7 +64,7 @@ footer {
         </style>
 
         
-
+<body>
      
         <!-- Header -->
 <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
@@ -67,15 +79,10 @@ footer {
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        
-        <li class="dropdown">
-          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
-          <ul id="g-account-menu" class="dropdown-menu" role="menu">
-            <li><?php echo HTML::link('admin/create','Incluir Carros') ?></li>
-             <li> <?php echo HTML::link('/admin','Carros') ?></li>
-          </ul>
-        </li>
-        <li><?php echo HTML::link('/logout','Sair') ?></li>
+      <li>
+      <?php echo HTML::link('admin/create','Incluir Carro') ?></li>
+      <li> <?php echo HTML::link('/admin','Carros') ?></li>
+      <li><?php echo HTML::link('/logout','Sair') ?></li>
       </ul>
     </div>
   </div><!-- /container -->
@@ -89,23 +96,10 @@ footer {
 <!-- /Main -->
 
 <footer class="text-center">SYNCONNECT 2014</footer>
- <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- JavaScript jQuery code from Bootply.com editor  -->
 
-<script type='text/javascript'>
+</body>
 
-$(document).ready(function() {
-  $(".alert").addClass("in").fadeOut(4500);
-  /* swap open/close side menu icons */
-  $('[data-toggle=collapse]').click(function(){
-  // toggle icon
-  $(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
-  });       
-});
-
-</script>
-
+</html>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

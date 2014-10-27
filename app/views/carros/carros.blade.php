@@ -23,8 +23,8 @@
                 @foreach($carros as $carro)
                     @if( $carro->vendido == 1 or  $carro->vendido == null)
                         <div class="col-md-4 portfolio-item">
-                            <a href="#">
-                                <img class="img-responsive" src="{{ $carro->pathImagem }}" alt="">
+                            <a href="/conteudo/{{$carro->idImages}}">
+                                <img class="img-responsive" width="500" src="{{ $carro->pathImagem }}" alt="">
                             </a>
                             <h3>
                             <p class="text-uppercase">

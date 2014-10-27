@@ -14,9 +14,12 @@
     <!-- Bootstrap Core CSS -->
     <?php echo HTML::style('css/bootstrap.min.css'); ?>
      <?php echo HTML::script('js/jquery-1.10.1.min.js'); ?>
-
+    <!-- FancyBox  -->
     <?php echo HTML::script('js/jquery.fancybox.js'); ?>
+    
     <?php echo HTML::style('css/jquery.fancybox.css'); ?>
+     <!-- Jquery Mask  -->
+    <?php echo HTML::script('js/mask.js'); ?>
     <!-- Custom CSS -->
     <?php echo HTML::style('css/3-col-portfolio.css'); ?>
     <?php echo HTML::style('css/screen.css'); ?>

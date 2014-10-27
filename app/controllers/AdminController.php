@@ -92,6 +92,7 @@ class AdminController extends BaseController {
 		$carro->precoCarro = Input::get('precoCarro');
 		$carro->quilometragemCarro = Input::get('quilometragemCarro');
 		$carro->vendido = Input::get('vendido');
+		$carro->obs = Input::get('obs');
 		//print_r($carro);
 		$carro->save();
 		
@@ -159,6 +160,7 @@ class AdminController extends BaseController {
 		$carro->anoModelo = Input::get('anoModelo');
 		$carro->precoCarro = Input::get('precoCarro');
 		$carro->quilometragemCarro = Input::get('quilometragemCarro');
+		$carro->obs = Input::get('obs');
 		//print_r($carro);
 		$carro->save();
 		//--Fim Cria Carro--//

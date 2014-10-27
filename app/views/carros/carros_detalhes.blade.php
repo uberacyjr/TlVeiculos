@@ -9,7 +9,7 @@
             /*
              *  Simple image gallery. Uses default settings
              */
-
+            $('.money').mask('000.000,00', {reverse: true});
             $('.fancybox').fancybox();
 
     });
@@ -29,7 +29,7 @@ p{
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    {{$model->descModelos}}
+                  {{$model->descModelos}}
                     <small> {{$brand->descMarcas}}</small>
                 </h1>
             </div>
@@ -43,7 +43,7 @@ p{
                <a class="fancybox" href=<?php echo "../".$imagem->pathImagem; ?>  data-fancybox-group="gallery" >  {{ HTML::image("$imagem->pathImagem",'foto', array('class'=>'img-responsive')) }}</a>
         
             </div>
-
+            <p ><strong style="font-size:19px; color:#666666;" >R$ </strong> <label class="money" style="font-size:22px;"> {{$car->precoCarro}}</label></p>
             <div class="col-md-4">
                 <strong>Opcionais</strong>
                   <p>
@@ -195,16 +195,22 @@ p{
         <!-- /.row -->
 
         <!-- Related Projects Row -->
-        <div class="row">
 
+             <div class="col-lg-12">
+                <h3 class="page-header">Observações</h3>
+                @if($car->obs != "")
+               <p> {{$car->obs}}</p>
+                @else
+                 <p>Não possui observações</p>
+                @endif
+            </div>
             <div class="col-lg-12">
-                <h3 class="page-header">Mais Fotos</h3>
+                <h3 class="page-header"></h3>
             </div>
             @foreach($images as $img)
             @if($imagem->pathImagem !=$img->pathImagem )
-            <div class="col-sm-3 col-xs-6">    
+            <div class="col-sm-2">    
                    <a class="fancybox" href=<?php echo "../".$img->pathImagem; ?>  data-fancybox-group="gallery" > {{ HTML::image("$img->pathImagem",'', array('class'=>'img-responsive portfolio-item')) }}</a>
-        
             </div>
             @endif
             @endforeach
@@ -212,7 +218,6 @@ p{
 
 
         </div>
-        <!-- /.row -->
-        <hr>
+
 
 @stop

@@ -99,6 +99,12 @@
       <input type="number" class="form-control" name="precoCarro" id="precoCarro" placeholder="Preço" required min='0'>
     </div>
   </div>
+     <div class="form-group">
+    <label for="precoCarro" class="col-sm-2 control-label">Observação</label>
+    <div class="col-sm-3">
+      <textarea class="form-control" rows="4" id="obs" name="obs"></textarea> 
+    </div>
+  </div>
   <hr>
    <div class="table-responsive">
        <h4>Opcionais</h4>

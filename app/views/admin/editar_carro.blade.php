@@ -2,7 +2,6 @@
 
 @section('conteudoAdmin')
 
-
            
 <style>
   .itens{
@@ -103,13 +102,20 @@
     <label for="vendido" class="col-sm-2 control-label">Vendido</label>
     <div class="col-sm-3">
       <select class="form-control" name="vendido">
+              <option value="1"  <?php if ($car->vendido == 1){ echo "selected"; } ?>>
+          não
+        </option>
         <option value="2" <?php if ($car->vendido == 2){ echo "selected"; } ?>>
           sim
         </option>
-          <option value="1"  <?php if ($car->vendido == 1){ echo "selected"; } ?>>
-          não
-        </option>
+    
       </select>
+    </div>
+  </div>
+     <div class="form-group">
+    <label for="precoCarro" class="col-sm-2 control-label">Observação</label>
+    <div class="col-sm-3">
+       <textarea class="form-control" rows="4" id="obs" name="obs">{{ $car->obs}}</textarea> 
     </div>
   </div>
   <hr>

@@ -1,6 +1,14 @@
 @extends('admin.area_administrativa')
 
 @section('conteudoAdmin')
+<script type="text/javascript">
+
+    $(document).ready(function() {
+         $('.money').mask('000.000,00', {reverse: true});
+
+    });
+</script>
+   
 
 <?php 
   $vendido = "";
@@ -54,7 +62,7 @@
                   {{$carro->descModelos }}
               @endif
           </td>
-            <td>
+            <td class="money">
              @if  ($carro->precoCarro != null or $carro->precoCarro != ''  )
                   {{ $carro->precoCarro }}
              @endif
