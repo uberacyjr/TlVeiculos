@@ -25,7 +25,11 @@ Route::get('/admin', function()
 });
 Route::get('/login', function()
 {
-
+	if (Auth::check())
+	{
+	   	  return Redirect::to('admin');
+	}
+	else
 	return View::make('admin.logar_usuario');
 
 });

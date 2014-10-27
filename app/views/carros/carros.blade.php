@@ -20,12 +20,16 @@
             <div class="row">
                 @foreach($carros as $carro)
                     @if( $carro->vendido == 1 or  $carro->vendido == null)
-                        <div class="col-md-4">
+                        <div class="col-md-4 portfolio-item">
                             <a href="/conteudo/{{$carro->idImages}}">
                                 <img class="img-responsive" width="500" src="{{ $carro->pathImagem }}" alt="">
                             </a>
                             <h3>
-                                {{ HTML::linkAction('ConteudoController@show',"$carro->descModelos",array($carro->idImages), array('class' => 'btn btn-info')) }}  
+                            <?php 
+                                $max = 10;
+                                $string = substr_replace($carro->descModelos, (strlen($carro->descModelos) > $max ? '...' : ''), $max);
+                            ?>
+                            {{ HTML::linkAction('ConteudoController@show',"$string",array($carro->idImages), array('class' => 'btn btn-info')) }}  
                             </h3>
                         </div>
                     @endif
