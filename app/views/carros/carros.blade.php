@@ -20,7 +20,7 @@
             <div class="row">
                 @foreach($carros as $carro)
                     @if( $carro->vendido == 1 or  $carro->vendido == null)
-                        <div class="col-md-4 portfolio-item">
+                        <div class="col-md-4">
                             <a href="/conteudo/{{$carro->idImages}}">
                                 <img class="img-responsive" width="500" src="{{ $carro->pathImagem }}" alt="">
                             </a>
