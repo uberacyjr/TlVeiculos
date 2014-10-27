@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BEM VINDO TLVEÍCULOS</title>
+    <title>TL VEÍCULOS</title>
 
     <!-- Bootstrap Core CSS -->
     <?php echo HTML::style('css/bootstrap.min.css'); ?>
@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-             <a href="/">{{ HTML::image('img/logotlveiculos.png', 'logo', array('height' => '35px', 'style'=>'margin-top:9px')) }}</a>
+             <a href="/">{{ HTML::image('img/logotlveiculos.png', 'logo', array('height' => '40spx', 'style'=>'margin-top:6px')) }}</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

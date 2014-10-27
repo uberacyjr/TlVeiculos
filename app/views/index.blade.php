@@ -55,7 +55,7 @@
                     </ul>
                </div>
                <div>
-                    <h2>A PRIMEIRA AGÊCIA DE VEÍCULOS SEMINOVOS DE VICENTE PIRES!</h2>
+                    <h2>A PRIMEIRA AGÊNCIA DE VEÍCULOS  DE VICENTE PIRES!</h2>
                </div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.608206429965!2d-48.03360801263368!3d-15.80309566475932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ4JzExLjAiUyA0OMKwMDInMDEuOCJX!5e1!3m2!1spt-BR!2sbr!4v1414111871201" width="400" height="300" frameborder="0" style="border:0"></iframe>
               </div>
