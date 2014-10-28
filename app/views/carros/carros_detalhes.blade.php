@@ -43,7 +43,12 @@ p{
                <a class="fancybox" href=<?php echo "../".$imagem->pathImagem; ?>  data-fancybox-group="gallery" >  {{ HTML::image("$imagem->pathImagem",'foto', array('class'=>'img-responsive')) }}</a>
         
             </div>
-            <p ><strong style="font-size:19px; color:#666666;" >R$ </strong> <label class="money" style="font-size:22px;"> {{$car->precoCarro}}</label></p>
+           @if($car->precoCarro != "0.00")  
+                <p ><strong style="font-size:19px; color:#666666;" >R$ </strong> <label class="money" style="font-size:22px;"> {{$car->precoCarro}}</label></p>
+           @else   
+             <p ><strong style="font-size:19px; color:#666666;" >R$ Venha Conferir </strong></p>
+
+           @endif
             <div class="col-md-4">
                 <strong>Opcionais</strong>
                   <p>
