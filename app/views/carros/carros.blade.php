@@ -9,7 +9,7 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Carros
+                <h1 class="page-header">Veículos
                     <!--<small>Semi Novos</small>-->
                 </h1>
             </div>
@@ -26,7 +26,7 @@
                             </a>
                             <h3>
                             <?php 
-                                $max = 10;
+                                $max = 15;
                                 $string = substr_replace($carro->descModelos, (strlen($carro->descModelos) > $max ? '...' : ''), $max);
                             ?>
                             {{ HTML::linkAction('ConteudoController@show',"$string",array($carro->idImages), array('class' => 'btn btn-info')) }}  

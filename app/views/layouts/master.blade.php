@@ -98,7 +98,7 @@
     
         <footer style="background-color:#efefef;">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="container">
                 </br>
                     <address><strong>Endereço: </strong> Rua 8 Condomínio 197 loja 01 - Vicente Píres - DF <strong>Telefones: </strong> (61) 3597 1700 - (61) 3597 2060</address>
                        <address> <div class="fb-like" data-href="https://www.facebook.com/tlveiculos?fref=ts" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></address>
