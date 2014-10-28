@@ -49,150 +49,150 @@ p{
              <p ><strong style="font-size:19px; color:#666666;" >R$ Venha Conferir </strong></p>
 
            @endif
+           <hr>
             <div class="col-md-4">
-                <strong>Opcionais</strong>
-                  <p>
+                <strong>Opcionais do carro </strong>
                   @if($item->airBag == 1)
-                        Air Bag 
+                        Air Bag <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                 <p>
                     @if($item->alarme == 1)
-                       Alarme
+                       Alarme <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                     @if($item->arCondicionado == 1)
-                    Ar Condicionado
+                    Ar Condicionado <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 <p>
                     @if($item->bancoMotoristaAjusteAltura == 1)
-                     Banco Motorista Ajuste Altura
+                     Banco Motorista Ajuste Altura <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                 <p>
                     @if($item->cdPlayer == 1)
-                     CD Player
+                     CD Player <label class="glyphicon glyphicon-ok"></label>
                     @endif     
                 </p>
                  <p>
                     @if($item->computadorBordo == 1)
-                     Computador de Bordo
+                     Computador de Bordo <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 <p>
                     @if($item->controleAutomaticoVelocidade == 1)
-                     Controle Automatico de Velocidade
+                     Controle Automatico de Velocidade <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                 <p>
                     @if($item->controleTracao == 1)
-                     Controle Tração
+                     Controle Tração <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 <p>    
                     @if($item->desembacadorTraseiro == 1)
-                     Desembacador Traseiro
+                     Desembacador Traseiro <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                 <p>
                     @if($item->direcaoHidraulica == 1)
-                     Direcao Hidráulica
+                     Direcao Hidráulica <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->dvdPlayer == 1)
-                     DVD Player
+                     DVD Player <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->encostoCabecaTraseiro == 1)
-                     Encosto Cabeca Traseiro
+                     Encosto Cabeca Traseiro <label class="glyphicon glyphicon-ok"></label>
                     @endif 
                 </p>
                  <p>
                     @if($item->farolXenonio == 1)
-                     Farol Xenonio
+                     Farol Xenonio <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->freioAbs == 1)
-                     Freio Abs
+                     Freio Abs <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->gps == 1)
-                     GPS
+                     GPS <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->limpadorTraseiro == 1)
-                     Limpador Traseiro
+                     Limpador Traseiro <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->retrovisorEletrico == 1)
-                     Retrovisor Elétrico
+                     Retrovisor Elétrico <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->rodaLigaLeve == 1)
-                     Limpador Traseiro
+                     Limpador Traseiro <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->sensorChuva == 1)
-                     Sensor de Chuva
+                     Sensor de Chuva <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->sensorEstacionamento == 1)
-                     Sensor de Estacionamento
+                     Sensor de Estacionamento <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->tetoSolar == 1)
-                     Teto Solar
+                     Teto Solar <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                    <p>
                     @if($item->tracao4x4 == 1)
-                     Tracao 4x4
+                     Tracao 4x4 <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
 
                    <p>
                     @if($item->travasEletricas == 1)
-                     Travas Elétricas
+                     Travas Elétricas <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
 
                    <p>
                     @if($item->vidrosEletricos == 1)
-                     Vidros Elétricos
+                     Vidros Elétricos <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
 
                    <p>
                     @if($item->voltanteRegulagemAltura == 1)
-                     Voltante Regulagem Altura
+                     Voltante Regulagem Altura <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->bancoCouro == 1)
-                     Banco de Couro
+                     Banco de Couro <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->radio == 1)
-                     Radio
+                     Radio <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->capotaMaritima == 1)
-                     Capota Maritima
+                     Capota Maritima <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
                  <p>
                     @if($item->protetorCacamba == 1)
-                     Protetor Caçamba
+                     Protetor Caçamba <label class="glyphicon glyphicon-ok"></label>
                     @endif
                 </p>
             </div>
@@ -202,11 +202,11 @@ p{
         <!-- Related Projects Row -->
 
              <div class="col-lg-12">
-                <h3 class="page-header">Observações</h3>
+                <h3 class="page-header">Observações <label class="glyphicon glyphicon-circle-arrow-down"></label> </h3>
                 @if($car->obs != "")
-               <p> {{$car->obs}}</p>
+                    <p> {{$car->obs}}</p>
                 @else
-                 <p>Não possui observações</p>
+                     <p>Não possui observações</p>
                 @endif
             </div>
             <div class="col-lg-12">
