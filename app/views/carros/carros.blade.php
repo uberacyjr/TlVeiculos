@@ -21,8 +21,8 @@
                 @foreach($carros as $carro)
                     @if( $carro->vendido == 1 or  $carro->vendido == null)
                         <div class="col-md-4 portfolio-item">
-                            <a href="/conteudo/{{$carro->image->idImages}}">
-                                <img class="img-responsive" width="500" src="  {{$carro->image->pathImagem}}" alt="">
+                            <a href="">
+                                <img class="img-responsive" width="500" src="  " alt="">
                             </a>
                             <h3>
                        
