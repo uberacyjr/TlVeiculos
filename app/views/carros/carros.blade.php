@@ -19,6 +19,7 @@
             <!-- Projects Row -->
             <div class="row">
                 @foreach($carros as $carro)
+                {{$carro->image}}
                     @if( $carro->vendido == 1 or  $carro->vendido == null)
                         <div class="col-md-4 portfolio-item">
                             <a href="">
