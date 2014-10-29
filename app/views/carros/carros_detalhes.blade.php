@@ -38,17 +38,16 @@ p{
 
         <!-- Portfolio Item Row -->
         <div class="row">
-          
             <div class="col-md-8">
                <a class="fancybox" href=<?php echo "../".$imagem->pathImagem; ?>  data-fancybox-group="gallery" >  {{ HTML::image("$imagem->pathImagem",'foto', array('class'=>'img-responsive')) }}</a>
-        
             </div>
            @if($car->precoCarro != "0.00")  
-                <p ><strong style="font-size:19px; color:#666666;" >R$ </strong> <label class="money" style="font-size:22px;"> {{$car->precoCarro}}</label></p>
+             <p ><strong style="font-size:19px; color:#666666;" >R$ </strong> <label class="money" style="font-size:22px;"> {{$car->precoCarro}}</label></p>
            @else   
              <p ><strong style="font-size:19px; color:#666666;" >R$ Venha Conferir </strong></p>
-
            @endif
+            <hr>
+            <p style="font-size:19px;"><strong style="color:#666666;" > Ano:</strong><strong> {{$car->anoModelo}}</strong> </p>
            <hr>
             <div class="col-md-4">
                 <strong>Opcionais do carro </strong>
