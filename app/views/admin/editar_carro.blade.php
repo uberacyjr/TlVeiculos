@@ -6,7 +6,7 @@
 <style>
   .itens{
 
-   margin-left:4px;
+   margin-left:16px;
  }
 </style>
 
@@ -151,11 +151,11 @@
       
        <label class="itens" >Controle Automatico Velocidade</label>
       <input type="checkbox" name="controleAutomaticoVelocidade"  <?php if ($item->controleAutomaticoVelocidade == 1){ echo "checked"; } ?>/>
-       <label class="itens" >COntrole de Tração</label>
+       <label class="itens" >Controle de Tração</label>
       <input type="checkbox" name="controleTracao" <?php if ($item->controleTracao == 1){ echo "checked"; } ?>/>
        <label class="itens" >Desembaçãdor Traseiro</label>
       <input type="checkbox" name="desembacadorTraseiro" <?php if ($item->desembacadorTraseiro == 1){ echo "checked"; } ?>/>
-       <label class="itens" >Direção Higrtaulica</label>
+       <label class="itens" >Direção Hidráulica</label>
       <input type="checkbox" name="direcaoHidraulica" <?php if ($item->direcaoHidraulica == 1){ echo "checked"; } ?>/>
        <label class="itens" >DVD Player</label>
       <input type="checkbox" name="dvdPlayer" <?php if ($item->dvdPlayer == 1){ echo "checked"; } ?>/>
@@ -191,9 +191,9 @@
       <input type="checkbox" name="tetoSolar" <?php if ($item->tetoSolar == 1){ echo "checked"; } ?>/>
        <label class="itens" >Tração 4X4</label>
       <input type="checkbox" name="tracao4x4" <?php if ($item->tracao4x4 == 1){ echo "checked"; } ?>/>
-       <label class="itens" >Travas Eletricas</label>
+       <label class="itens" >Travas Elétricas</label>
       <input type="checkbox" name="travasEletricas" <?php if ($item->travasEletricas == 1){ echo "checked"; } ?>/>
-       <label class="itens" >Vidros Eletricos</label>
+       <label class="itens" >Vidros Elétricos</label>
       <input type="checkbox" name="vidrosEletricos" <?php if ($item->vidrosEletricos == 1){ echo "checked"; } ?>/>
        <label class="itens" >Volante C/ Regulagem Altura</label>
       <input type="checkbox" name="voltanteRegulagemAltura" <?php if ($item->voltanteRegulagemAltura == 1){ echo "checked"; } ?>/>

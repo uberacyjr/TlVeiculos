@@ -7,7 +7,7 @@
 <style>
   .itens{
 
-   margin-left:4px;
+   margin-left:13px;
  }
 </style>
 
@@ -135,17 +135,17 @@
 </br>
 </br>
       
-       <label class="itens" >Controle Automatico Velocidade</label>
+       <label class="itens" >Controle Automático Velocidade</label>
       <input type="checkbox" name="controleAutomaticoVelocidade"/>
-       <label class="itens" >COntrole de Tração</label>
+       <label class="itens" >Controle de Tração</label>
       <input type="checkbox" name="controleTracao"/>
        <label class="itens" >Desembaçãdor Traseiro</label>
       <input type="checkbox" name="desembacadorTraseiro"/>
-       <label class="itens" >Direção Higrtaulica</label>
+       <label class="itens" >Direção Hidráulica</label>
       <input type="checkbox" name="direcaoHidraulica"/>
        <label class="itens" >DVD Player</label>
       <input type="checkbox" name="dvdPlayer"/>
-     <label class="itens" >Encosto Cabeca Traseiro</label>
+     <label class="itens" >Encosto Cabeça Traseiro</label>
       <input type="checkbox" name="encostoCabecaTraseiro"/>
    
 </br>
@@ -177,9 +177,9 @@
       <input type="checkbox" name="tetoSolar"/>
        <label class="itens" >Tração 4X4</label>
       <input type="checkbox" name="tracao4x4"/>
-       <label class="itens" >Travas Eletricas</label>
+       <label class="itens" >Travas Elétricas</label>
       <input type="checkbox" name="travasEletricas"/>
-       <label class="itens" >Vidros Eletricos</label>
+       <label class="itens" >Vidros Elétricos</label>
       <input type="checkbox" name="vidrosEletricos"/>
        <label class="itens" >Volante C/ Regulagem Altura</label>
       <input type="checkbox" name="voltanteRegulagemAltura"/>

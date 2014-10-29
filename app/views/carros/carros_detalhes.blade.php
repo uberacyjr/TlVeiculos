@@ -51,6 +51,7 @@ p{
            <hr>
             <div class="col-md-4">
                 <strong>Opcionais do carro </strong>
+                <p>
                   @if($item->airBag == 1)
                         Air Bag <label class="glyphicon glyphicon-ok"></label>
                     @endif
