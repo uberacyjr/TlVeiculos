@@ -6,6 +6,14 @@ class Model extends Eloquent {
 	protected $guarded = array();
  	public function getKeyName(){
     	return "idModels";
-  }
+  	}
+  	public function car()
+    {
+        return $this->belongsTo('Car','idModels');
+    }
+    public function brand()
+    {
+        return $this->hasOne('Brand','idBrands','idBrands');
+    }
 }
 

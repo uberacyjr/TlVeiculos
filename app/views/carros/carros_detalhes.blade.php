@@ -203,7 +203,7 @@ p{
              <div class="col-lg-12">
                 <h3 class="page-header">Observações <label class="glyphicon glyphicon-circle-arrow-down"></label> </h3>
                 @if($car->obs != "")
-                    <p> {{$car->obs}}</p>
+                    <p> {{nl2br($car->obs)}}</p>
                 @else
                      <p>Não possui observações</p>
                 @endif

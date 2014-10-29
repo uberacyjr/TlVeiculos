@@ -7,6 +7,11 @@ class Image extends Eloquent {
 
 	 public function getKeyName(){
 	    return "idImages";
-	  }
+	 }
+	 public function car(){
+	   return $this->belongsTo('Car','idImages');
+	 }
+
+
 }
 

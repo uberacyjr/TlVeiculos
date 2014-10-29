@@ -6,7 +6,7 @@ class AdminController extends BaseController {
 
 	public function Index()
 	{
-		$carros = DB::table('Cars')->leftJoin('Models', 'Cars.idModels', '=', 'Models.idModels')->leftJoin('Brands','Models.idBrands','=', 'Brands.idBrands')->get();
+		$carros = Car::all();
 		return View::make('admin.listar_carro',compact('carros') );
 	}
 	public function Create()
@@ -15,7 +15,6 @@ class AdminController extends BaseController {
 		$fuels = Fuel::all();
 		$exchanges = Exchange::all();
 		$colors = Color::all();
-		
 		return View::make('admin.cadastrar_carro', compact('brands', 'fuels', 'exchanges', 'colors'));
 
 	}
@@ -78,15 +77,12 @@ class AdminController extends BaseController {
 		$item->protetorCacamba = Input::get('protetorCacamba');
 		$item->radio = Input::get('radio');
 		$item->save();
-		
-	    $lastModeloRecord =  Model::all()->last();
- 	    $lastItemoRecord =  Item::all()->last();
 	
 		$carro->idFuels = Input::get('idFuels');
 		$carro->idExchange = Input::get('idExchange');
-		$carro->idItems = $lastItemoRecord->idItems;
+		$carro->idItems =$item->idItems;
 		$carro->idColors = Input::get('idColors');
-		$carro->idModels = $lastModeloRecord->idModels;
+		$carro->idModels = $modelo->idModels;
 		$carro->placaCarro = Input::get('placaCarro');
 		$carro->anoModelo = Input::get('anoModelo');
 		$carro->precoCarro = Input::get('precoCarro');
@@ -170,12 +166,16 @@ class AdminController extends BaseController {
 	public function destroy($id)
 	{
 			$car = Car::findOrFail($id);
+			$model =  Model::findOrFail($car->idModels);
+			$item =  Item::findOrFail($car->idItems);
 			$imageAux = Image::where('idCars','=', $car->idCars)->get();
 			$image = Image::where('idCars','=', $car->idCars)->delete();
 			foreach ($imageAux as $images ) 
 			{
 				 File::delete($images->pathImagem);
 			}
+			$item->delete();
+			$model->delete();
 			$car->delete();
 		return Redirect::action('AdminController@index');
 	}

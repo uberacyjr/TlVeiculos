@@ -14,8 +14,7 @@
   $vendido = "";
 ?>
 <div class="table-responsive">
- @if(!empty($carros))
-  
+ @if(! $carros->isEmpty())
     <table class="table table-striped">
       <thead>
         <tr>
@@ -29,53 +28,36 @@
         </tr>
       </thead>
       <tbody>
-
-     
         @foreach($carros as $carro)
          <?php 
          if  ($carro->vendido == null or $carro->vendido == '1'  )
          {
-           $vendido = "success";
-            
-          }
-          else
-          {
+           $vendido = "success";  
+         }
+         else
+        {
 
-            $vendido = "danger";
-            
-          }
+            $vendido = "danger"; 
+        }
         ?>
         <tr class="{{$vendido}}">
-          
            <td>
-              @if  ($carro->placaCarro != null or $carro->placaCarro != ''  )
-                  {{$carro->placaCarro }}
-              @endif
+                {{$carro->placaCarro }}
           </td>
           <td>
-              @if  ($carro->descMarcas != null or $carro->descMarcas != ''  )
-                  {{$carro->descMarcas }}
-              @endif
+                {{$carro->model->brand->descMarcas }}
           </td>
            <td>
-              @if  ($carro->descModelos != null or $carro->descModelos != ''  )
-                  {{$carro->descModelos }}
-              @endif
+                {{$carro->model->descModelos }}
           </td>
             <td class="money">
-             @if  ($carro->precoCarro != null or $carro->precoCarro != ''  )
                   {{ $carro->precoCarro }}
-             @endif
           </td>
-             <td>
-             @if  ($carro->quilometragemCarro != null or $carro->quilometragemCarro != ''  )
+         <td>
               {{ $carro->quilometragemCarro }}
-            @endif
           </td>
-          <td>
-            @if  ($carro->anoModelo != null or $carro->anoModelo != ''  )
-                {{ $carro->anoModelo }}
-            @endif
+          <td>  
+              {{ $carro->anoModelo }}
           </td>
           <td> 
            {{ HTML::linkAction('AdminController@edit','Editar Carro',array($carro->idCars), array('class' => 'btn btn-info')) }} {{ HTML::linkAction('ImageController@show','Incluir Imagens',array($carro->idCars), array('class' => 'btn btn-info')) }}  
