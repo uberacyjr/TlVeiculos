@@ -13,7 +13,7 @@ class Car extends Eloquent {
   {
     return $this->hasOne('Model','idModels','idModels');
   }
-   public function image()
+  public function image()
   {
     return $this->hasOne('Image','idCars','idCars')->groupBy('idCars');
   }
