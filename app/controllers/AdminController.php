@@ -174,9 +174,9 @@ class AdminController extends BaseController {
 			{
 				 File::delete($images->pathImagem);
 			}
+			$car->delete();
 			$item->delete();
 			$model->delete();
-			$car->delete();
 		return Redirect::action('AdminController@index');
 	}
 
