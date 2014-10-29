@@ -12,12 +12,11 @@
     <div style="height:80px; "></div>
                     <div class="col-md-8" style="margin: 0 auto; float: none;">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                 <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-                            </ol>
                             <div class="carousel-inner">
-                                <div class="item active">
+                                 <div class="item active">
+                                    <img class="slide-image" src="img/banner3.png" alt="">
+                                </div>
+                                <div class="item">
                                     <img class="slide-image" src="img/slide1.png" alt="">
                                 </div>
                                 <div class="item ">
