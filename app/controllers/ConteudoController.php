@@ -5,8 +5,8 @@ class ConteudoController extends BaseController {
 
 	public function Index()
 	{
-		//$carros = DB::table('Cars')->join('Images', 'Cars.idCars', '=', 'Images.idCars')->join('Models','Cars.idModels','=','Models.idModels')->join('Items','Cars.idItems','=','Items.idItems')->groupBy('Cars.idCars')->get();
-		$carros = Car::all();
+		$carros = DB::table('Cars')->join('Images', 'Cars.idCars', '=', 'Images.idCars')->join('Models','Cars.idModels','=','Models.idModels')->join('Items','Cars.idItems','=','Items.idItems')->groupBy('Cars.idCars')->get();
+		//$carros = Car::all();
 		return View::make('carros.carros', compact('carros') );
 	}
 	public function show($id)
