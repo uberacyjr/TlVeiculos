@@ -1,4 +1,4 @@
-Project mad to study the Laravel PHP Framework.
+Project made to study the Laravel PHP Framework.
 
 Its a site for a car dealer company. 
 
